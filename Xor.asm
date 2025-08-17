@@ -1,7 +1,8 @@
+// Xor.asm
 @R0
 D=M       
 @x
-M=D       
+M=D      
 
 @R1
 D=M       
@@ -9,7 +10,7 @@ D=M
 M=D       
 
 @R2
-M=0      
+M=0       
 
 @i
 M=0       
@@ -25,7 +26,7 @@ D;JGE
 @mask
 M=1       
 @i
-D=M       
+D=M      
 @shift
 M=D       
 
@@ -37,7 +38,7 @@ D=D-A
 @END_SHIFT
 D;JLE     
 @mask
-M=M+M    
+M=M+M     
 @shift
 M=M-1     
 @SHIFT_MASK
@@ -62,16 +63,17 @@ M=D
 D=M       
 @bit_y
 D=D!M     
+
 @bit_x
 D=M
 @bit_y
-D=D-M
+D=D-M     
 @SAME
 D;JEQ     
 @1
 D=A       
 @result_bit
-M=D       
+M=D      
 @SET_BIT
 0;JMP     
 
@@ -79,7 +81,7 @@ M=D
 @0
 D=A       
 @result_bit
-M=D       
+M=D      
 
 (SET_BIT)
 @result_bit
@@ -97,6 +99,7 @@ M=M+1
 (END)
 @END
 0;JMP     
+
 
 @x
 0;JMP

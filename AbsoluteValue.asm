@@ -1,3 +1,4 @@
+// AbsoluteValue.asm
 @R0
 D=M       
 @x
@@ -9,9 +10,9 @@ M=0
 @x
 D=M       
 @32768
-D=D-A    
+D=D-A     
 @MIN_VALUE
-D;JEQ    
+D;JEQ     
 
 @x
 D=M       
@@ -21,7 +22,7 @@ D=D-M
 D;JLT     
 
 @x
-D=M      
+D=M       
 @R1
 M=D       
 @R2
@@ -33,11 +34,9 @@ M=0
 @x
 D=M       
 @NOT_x
-M=D       
+M=!D      
 @NOT_x
-D=M       
-@1
-D=D+A     
+D=M+1     
 @R1
 M=D       
 @R2
@@ -47,15 +46,16 @@ M=1
 
 (MIN_VALUE)
 @R3
-M=1    
+M=1       
 @x
 D=M       
 @R1
-M=D      
+M=D       
 
 (END)
 @END
-0;JMP   
+0;JMP     
+
 
 @x
 0;JMP
