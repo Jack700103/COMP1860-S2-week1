@@ -61,6 +61,14 @@ M=D
 @bit_x
 D=M
 @bit_y
+D=D+M   
+@bit_x
+D=M
+@bit_y
+D=D!M   
+@bit_x
+D=M
+@bit_y
 D=D-M
 @temp
 M=D
